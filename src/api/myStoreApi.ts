@@ -8,9 +8,7 @@ myStoreApi.interceptors.request.use((config) => {
     const token = localStorage.getItem('token') ?? '';
     if(token) {
       (config.headers as AxiosHeaders).set('Authorization', `Bearer ${token}`);//JWT
-    } else {
-      
-    }   
+    } 
     return config
 })
 
