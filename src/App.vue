@@ -1,10 +1,38 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/profile">Profile</router-link>
-  </nav>
+  </nav> -->
+  <NavBar class="flex justify-between"
+  title="Wellcome to MyStore" 
+    :links="[
+      { label: 'Facebook', link: 'http://facebook.com' },
+      { label: 'Instagram', link: 'http://instagram.com' }
+    ]"
+    @buttonClicked="alertClick($event)"
+  />
   <router-view/>
 </template>
+
+<script lang="ts">
+import NavBar from "./components/NavBar.vue"
+import {Link} from "@/interfaces/link"
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'AppComponent',
+  components: {
+    NavBar
+  },
+  setup() {
+    return {
+      alertClick: (link: Link) => alert(link.label + ' Pulsado!'),
+    }
+  }
+  
+})
+</script>
+
 
 <style>
 #app {
@@ -16,15 +44,7 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 5px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
