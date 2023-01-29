@@ -71,7 +71,7 @@ nav {
   background-color: rgb(35,47,62);
   color: white;
 }
-/*rgb(19,25,33)*/
+
 h4 {
     color: white;
 }
