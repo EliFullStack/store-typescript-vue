@@ -1,0 +1,15 @@
+html {
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+*,*:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 2;
+}
+
+
