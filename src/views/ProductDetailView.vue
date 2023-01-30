@@ -1,9 +1,9 @@
 <template>
-  <div v-if="!isLoading">
+  <div class="product-detail" v-if="!isLoading">
+      <img :src="product.category.image" alt="" />
       <h1>Title: {{ product.title }}</h1>
       <h2>Price: {{ product.price }}</h2>
       <h2>Name: {{ product.category.name }}</h2>
-      <img :src="product.category.image" alt="" />
   </div>
   <div v-else>Cargando...</div>
 </template>
@@ -37,3 +37,13 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+    margin: 20px auto;
+    gap: 10px;
+}
+</style>

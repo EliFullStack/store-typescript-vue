@@ -6,6 +6,7 @@
         <ProductItem
           v-for="product in products"
           :key="product.id" :product="product"
+          @goToDetail="goToDetail"
         />
           
       </div>
@@ -50,5 +51,6 @@
   gap: 1rem 1rem;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
   </style>
