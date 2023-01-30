@@ -10,9 +10,9 @@
             <li class="hover:text-gray-300">
                 <router-link :to="{ name: 'profile'}">Profile</router-link>
             </li>
-            <li class="hover:text-gray-300">
+            <!-- <li class="hover:text-gray-300">
                 <router-link :to="{ name: 'login'}">Log in</router-link>
-            </li>
+            </li> -->
         </ul>
         <div class="justify-self-end">
             <button
