@@ -16,9 +16,14 @@ const routes: Array<RouteRecordRaw> = [
   },
 
   {
-    path: '/detail',
+    path: '/detail/:id',
     name: 'detail',
-    component: () => import(/* webpackChunkName: "detail" */ '../views/ProductDetailView.vue')
+    component: () => import(/* webpackChunkName: "detail" */ '../views/ProductDetailView.vue'),
+    props: (route) => {
+      const id = Number(route.params.id);
+      const userRole = localStorage.getItem('userRole');
+      return isNaN(id) ? { id: null, userRole } : { id, userRole }
+    }
   },
 
   {
@@ -26,6 +31,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'products-list',
     component: () => import(/* webpackChunkName: "products-list" */ '../views/ProductsListView.vue')
   },
+  
 
   {
     path: '/profile',

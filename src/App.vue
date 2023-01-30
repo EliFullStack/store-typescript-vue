@@ -12,6 +12,7 @@
     @buttonClicked="alertClick($event)"
   />
   <NavBarLinks/>
+  
   <router-view/>
 </template>
 
@@ -20,6 +21,7 @@ import NavBar from "./components/NavBar.vue"
 import {Link} from "@/interfaces/link"
 import { defineComponent } from 'vue'
 import NavBarLinks from './components/NavBarLinks.vue'
+
 
 export default defineComponent({
   name: 'AppComponent',

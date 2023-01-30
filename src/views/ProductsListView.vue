@@ -1,14 +1,14 @@
 <template>
      <div class="products-list">
-    <div v-if="isLoading">Loading...</div>
-    <div class="product-list" v-else>
-      
-      <ProductItem
-        v-for="product in products"
-        :key="product.id" :product="product"
-      />
+      <div v-if="isLoading">Loading...</div>
+      <div class="product-list" v-else>
         
-    </div>
+        <ProductItem
+          v-for="product in products"
+          :key="product.id" :product="product"
+        />
+          
+      </div>
   </div>
   </template>
   
@@ -48,5 +48,7 @@
   flex-flow: row wrap;
   width: 100%;
   gap: 1rem 1rem;
+  justify-content: center;
+  margin-top: 20px;
 }
   </style>
