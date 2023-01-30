@@ -5,10 +5,13 @@
                 <router-link :to="{ name: 'home'}">Home</router-link> 
             </li>
             <li class="hover:text-gray-300">
-                <router-link :to="{ name: 'products-list', params: {id: 26}}">Listado de Productos</router-link>
+                <router-link :to="{ name: 'products-list'}">Listado de Productos</router-link>
             </li>
             <li class="hover:text-gray-300">
                 <router-link :to="{ name: 'profile'}">Profile</router-link>
+            </li>
+            <li class="hover:text-gray-300">
+                <router-link :to="{ name: 'login'}">Log in</router-link>
             </li>
         </ul>
         <div class="justify-self-end">
@@ -32,8 +35,6 @@ export default {
 nav {
     background-color: rgb(19,25,33);
     padding: 20px;
-    /* display: flex;
-    justify-content: center; */
     color: white;
 }
 
